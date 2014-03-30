@@ -1,25 +1,43 @@
 ﻿using System;
 
-namespace Moduler
+namespace Constant
 {
 	class MainClass
 	{
 		public static void Main (string[] args)
 		{
-			Console.Write ("Enter the 1st number : ");
-			int num1 = int.Parse (Console.ReadLine ()); 
-			Console.Write ("Enter the 2nd number : ");
-			int num2 = int.Parse (Console.ReadLine ());
-			Console.Write ("Enter the operation(/, % are allowed) : ");
-			//Console.Write ("{0} / {1} = {2}, {0} % {1} = {3}", num1, num2, num1 / num2, num1 % num2);
-			// 정수형 나눗셈은 반올림을 안함
-			string operation = Console.ReadLine ();
-			if (operation == "/") {
-				Console.Write ("{0} / {1} = {2}", num1, num2, num1 / num2);
-			}else if (operation == "%") {
-					Console.Write ("{0} % {1} = {2}", num1, num2, num1 % num2);
-			}else{
-				Console.Write ("You entered invalid operation, \"{0}\". Only / and % are allowed.", operation);
+			Console.Write("Enter your number: ");
+
+			int number = int.Parse(Console.ReadLine());
+			const int SUNDAY	  = 0;
+			const int MONDAY	  = 1;
+			const int TUESDAY     = 2;
+			const int WEDNESDAY   = 3;
+			const int THURSDAY 	  = 4;
+			const int FRIDAY	  = 5;
+			const int SATERDAY 	  = 6;
+			switch (number) {
+			case SUNDAY:
+				Console.WriteLine ("Sun");
+				break;
+			case MONDAY:
+				Console.WriteLine ("Moon");
+				break;
+			case TUESDAY:
+				Console.WriteLine ("Mars");
+				break;
+			case WEDNESDAY:
+				Console.WriteLine ("Mercury");
+				break;
+			case THURSDAY:
+				Console.WriteLine ("Jupitor");
+				break;
+			case FRIDAY:
+				Console.WriteLine ("Venus");
+				break;
+			case SATERDAY:
+				Console.WriteLine ("Saturn");
+				break;
 			}
 		}
 	}
